@@ -49,7 +49,7 @@ class AsignacionTarea(models.Model):
 class Comentario(models.Model):
     contenido = models.TextField()
     fecha_comentario = models.DateTimeField(default=timezone.now)
-    autor = models.OneToOneField(Usuario, on_delete=models.CASCADE, default=1)
+    autor = models.OneToOneField(Usuario, on_delete=models.CASCADE)
     tarea = models.OneToOneField(Tarea, on_delete=models.CASCADE)
 
 class ProyectoAsignado(models.Model):
