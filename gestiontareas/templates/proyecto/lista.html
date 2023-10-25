@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>LISTADO DE PROYECTOS</h1>
+        {% for proyecto in proyectos_mostrar%}
+        <div>
+            <h2>Nombre: {{proyecto.nombre}}</h2>
+            <h2>Descripcion: {{proyecto.descripcion}}</h2>
+            <h2>Fecha Inicio: {{proyecto.fecha_inicio}}</h2>
+            <h2>Fecha Fin: {{proyecto.fecha_fin}}</h2>
+            <h2>Autores: {{proyecto.usuario.nombre}}</h2>
+            <h2>Usuarios: </h2>
+            <ul>
+                {% for usuario in proyecto.usuario.all%}
+                <li>{{usuario.nombre}}</li>
+                {%endfor%}
+            </ul>
+            <h2>Tareas: {{proyecto.tarea.titulo}}</h2>
+           
+        {% endfor%}
+    </body>
+
+</html>
