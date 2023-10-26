@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Tareas del Proyecto: {{ proyecto.nombre }}</h1>
+    <h2>Lista de Tareas del Proyecto</h2>
+    <ul>
+        {% for tarea in tareasproyecto_mostrar %}
+            <li>
+                <h3>{{ tarea.titulo }}</h3>
+                <p>Descripción: {{ tarea.descripcion }}</p>
+                <p>Prioridad: {{ tarea.prioridad }}</p>
+                <p>Fecha de Creación: {{ tarea.fecha_creacion }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Usuarios asignados a la Tarea: {{ tarea.titulo }}</h1>
+    <h2>Lista de Usuarios Asignados a la Tarea</h2>
+    <ul>
+        {% for asignacion in asignaciones %}
+            <li>
+                <p>Usuario: {{ asignacion.usuario.nombre }}</p>
+                <p>Fecha de Asignación: {{ asignacion.fecha_asignacion }}</p>
+                <p>Observaciones: {{ asignacion.observaciones }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
