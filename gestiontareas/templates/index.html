@@ -7,6 +7,7 @@
             <li><a href="{% url 'lista_proyectos' %}">Proyectos</a></li>
             <li><a href="{% url 'dame_tareas_proyecto_porfecha' id_proyecto=1 %}">Tareas del Proyecto 1</a></li>
             <li><a href="{% url 'listar_usuarios_asignados' id_tarea=1 %}">Usuarios Asignados a Tarea 1</a></li>
+            <li><a href="{% url 'dame_tareas_observaciones' 1 'prueba' %}">Tareas asignadas a Usuario 1 filtrado por observaciones</a></li>
         </ul>
     </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Usuario: {{ usuario.nombre }}</h1>
+    <h2>Tareas filtradas por observaciones</h2>
+    <ul>
+        {% for asignacion in asignaciones %}
+            <li>
+                <p>Título de la Tarea: {{ asignacion.tarea.titulo }}</p>
+                <p>Fecha de Asignación: {{ asignacion.fecha_asignacion }}</p>
+                <p>Observaciones: {{ asignacion.observaciones }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
