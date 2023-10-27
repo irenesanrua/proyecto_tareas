@@ -5,12 +5,12 @@
     <h1>Usuario: {{ usuario.nombre }}</h1>
     <h2>Tareas filtradas por observaciones</h2>
     <ul>
-        {% for asignacion in asignaciones %}
-            <li>
-                <p>Título de la Tarea: {{ asignacion.tarea.titulo }}</p>
-                <p>Fecha de Asignación: {{ asignacion.fecha_asignacion }}</p>
-                <p>Observaciones: {{ asignacion.observaciones }}</p>
-            </li>
+        {% for asignacion in mostrar_asignaciones %}
+            <ul>
+                <li>Título de la Tarea: {{ asignacion.tarea.titulo }}</li>
+                <li>Fecha de Asignación: {{ asignacion.fecha_asignacion }}</li>
+                <li>Observaciones: {{ asignacion.observaciones }}</li>
+            </ul>
         {% endfor %}
     </ul>
 </body>
