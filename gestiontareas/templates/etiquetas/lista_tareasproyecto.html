@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Etiquetas asignadas a las tareas del proyecto: {{ proyecto.nombre }}</h1>
+    <h2>Lista etiquetas de todas las tareas</h2>
+    <ul>
+        {% for etiqueta in etiquetas %}
+            <li>
+                
+                <p>Etiqueta: {{ etiqueta.nombre }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

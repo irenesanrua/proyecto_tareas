@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Usuarios no asignados a la Tarea: {{ tarea.titulo }}</h1>
+    <h2>Lista de usuarios:</h2>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>
+                <p>Usuario: {{ usuario.usuario }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

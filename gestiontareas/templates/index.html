@@ -4,12 +4,16 @@
         <h1>GESTIÓN DE TAREAS ONLINE</h1>
         <h2>LISTADO DE ENLACES</h2>
         <ul>
-            <li><a href="{% url 'lista_proyectos' %}">Proyectos</a></li>
-            <li><a href="{% url 'dame_tareas_proyecto_porfecha' id_proyecto=1 %}">Tareas del Proyecto 1</a></li>
-            <li><a href="{% url 'listar_usuarios_asignados' id_tarea=1 %}">Usuarios Asignados a Tarea 1</a></li>
-            <li><a href="{% url 'dame_tareas_observaciones' 1 'ready' %}">Tareas asignadas a Usuario 1 filtrado por observaciones</a></li>
-            <li><a href="{% url 'mostrar_tareas_completadas_anios' %}">Tareas Completadas entre Años</a></li>
-            <li><a href="{% url 'dame_ultimo_cliente_que_comento' 1 %}">Último comentario que se hizo en el proyecto 1</a></li>
+            <li>2.<a href="{% url 'lista_proyectos' %}">Proyectos</a></li>
+            <li>3.<a href="{% url 'dame_tareas_proyecto_porfecha' id_proyecto=1 %}">Tareas del Proyecto 1</a></li>
+            <li>4.<a href="{% url 'listar_usuarios_asignados' id_tarea=1 %}">Usuarios Asignados a Tarea 1</a></li>
+            <li>5.<a href="{% url 'dame_tareas_observaciones' 1 'ready' %}">Tareas asignadas a Usuario 1 filtrado por observaciones</a></li>
+            <li>6.<a href="{% url 'mostrar_tareas_completadas_anios' %}">Tareas Completadas entre Años</a></li>
+            <li>7.<a href="{% url 'dame_ultimo_cliente_que_comento' 1 %}">Último comentario que se hizo en el proyecto 1</a></li>
+            <li>8.<a href="{% url 'dame_comentarios_tarea' 1 2023 'Well'%}">Comentarios de la tarea 1 que empiecen por una palabra</a></li>
+            <li>9.<a href="{% url 'dame_etiquetas_tareas_proyecto' 1 %}">Etiquetas asignadas a las tareas del proyecto 1</a></li>
+            <li>10a.<a href="{% url 'dame_usuarios_no_asignados_tarea' 1 %}">Usuarios no asignados a la Tarea 1</a></li>
+            <li>10b.<a href="{% url 'usuarios_no_asignados'%}">Usuarios no asignados a Tareas</a></li>
         </ul>
     </body>
 </html>

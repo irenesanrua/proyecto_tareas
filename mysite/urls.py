@@ -20,3 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('gestiontareas.urls')),
 ]
+
+from django.conf.urls import handler404, handler400, handler403, handler500
+handler404 = 'gestiontareas.views.error_404'
+handler500 = 'gestiontareas.views.error_500'
+handler403 = 'gestiontareas.views.error_403'
+handler400 = 'gestiontareas.views.error_400'

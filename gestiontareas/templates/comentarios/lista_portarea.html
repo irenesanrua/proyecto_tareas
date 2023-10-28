@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>Comentarios asignados a la Tarea: {{ tarea.titulo }}</h1>
+    <h2>Filtrados por Año y Palabra que Empiece con...</h2>
+    <ul>
+        {% for comentario in comentarios %}
+            <li>
+                <p>Contenido: {{ comentario.contenido }}</p>
+                <p>Fecha del Comentario: {{ comentario.fecha_comentario }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
