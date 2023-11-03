@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-    <h1>Usuario: {{ usuario.nombre }}</h1>
+{% extends "principal.html" %}
+
+{% block contenido %}
+ <h1>Usuario: {{ usuario.nombre }}</h1>
     <h2>Tareas filtradas por observaciones</h2>
     <ul>
         {% for asignacion in mostrar_asignaciones %}
@@ -13,5 +12,4 @@
             </ul>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

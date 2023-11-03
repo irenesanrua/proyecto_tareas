@@ -1,0 +1,19 @@
+
+.nav li{
+    display: inline-block;
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.nav{
+    border: 3px groove darkred;
+    background-color: lightcoral;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+}

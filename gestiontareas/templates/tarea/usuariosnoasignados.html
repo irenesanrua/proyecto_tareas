@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-    <h1>Usuarios no asignados a la Tarea: {{ tarea.titulo }}</h1>
+{% extends "principal.html" %}
+
+{% block contenido %}
+<h1>Usuarios no asignados a la Tarea: {{ tarea.titulo }}</h1>
     <h2>Lista de usuarios:</h2>
     <ul>
         {% for usuario in usuarios %}
@@ -11,5 +10,4 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

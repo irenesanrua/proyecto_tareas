@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <h1>LISTADO DE PROYECTOS</h1>
+{% extends "principal.html" %}
+
+{% block contenido %}
+  <h1>LISTADO DE PROYECTOS</h1>
         <h1>------------------------------------</h1>
         {% for proyecto in proyectos_mostrar%}
         <div>
@@ -26,7 +25,6 @@
             <p>{{proyecto.tareas.titulo}}</p>
           <h1>------------------------------------</h1> 
         {% endfor%}
-        
-    </body>
+{% endblock %}
 
-</html>
+      

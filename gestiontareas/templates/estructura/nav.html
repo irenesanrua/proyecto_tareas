@@ -1,0 +1,12 @@
+<ul class="nav">
+    <li><a href="{% url 'lista_proyectos' %}">Ejercicio 2</a></li>
+    <li><a href="{% url 'dame_tareas_proyecto_porfecha' id_proyecto=1 %}">Ejercicio 3</a></li>
+    <li><a href="{% url 'listar_usuarios_asignados' id_tarea=1 %}">Ejercicio 4</a></li>
+    <li><a href="{% url 'dame_tareas_observaciones' 1 'ready' %}">Ejercicio 5</a></li>
+    <li><a href="{% url 'mostrar_tareas_completadas_anios' %}">Ejercicio 6</a></li>
+    <li><a href="{% url 'dame_ultimo_cliente_que_comento' 1 %}">Ejercicio 7</a></li>
+    <li><a href="{% url 'dame_comentarios_tarea' 1 2023 'Well'%}">Ejercicio 8</a></li>
+    <li><a href="{% url 'dame_etiquetas_tareas_proyecto' 1 %}">Ejercicio 9</a></li>
+    <li><a href="{% url 'dame_usuarios_no_asignados_tarea' 1 %}">Ejercicio 10a</a></li>
+    <li><a href="{% url 'usuarios_no_asignados'%}">Ejercicio 10b</a></li>
+</ul>

@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
+
+{% extends "principal.html" %}
+
+{% block contenido %}
     <h1>Comentarios asignados a la Tarea: {{ tarea.titulo }}</h1>
     <h2>Filtrados por Año y Palabra que Empiece con...</h2>
     <ul>
@@ -12,5 +12,4 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

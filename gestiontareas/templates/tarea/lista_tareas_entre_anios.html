@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-    <h1>Tareas Completadas entre {{ anyo_inicio }} y {{ anyo_fin }}</h1>
+{% extends "principal.html" %}
+
+{% block contenido %}
+  <h1>Tareas Completadas entre {{ anyo_inicio }} y {{ anyo_fin }}</h1>
     <ul>
         {% for tarea in tareas %}
             <li>
@@ -13,5 +12,4 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

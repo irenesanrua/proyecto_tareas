@@ -1,0 +1,25 @@
+<html>
+    {% load static %}
+    <head>
+        <title>Mi Gestion de Tareas</title>
+        <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+        <script src="{% static 'javascript/tutorial.js' %}"></script>
+    </head>
+
+    <body>
+       
+        <h1>GESTION DE TAREAS ONLINE</h1>
+
+        {% include "estructura/nav.html"%}
+        <img src="{% static  'imagenes/imagen.png' %}" alt="Imagen de Django"> 
+        {% block header %}
+        {% endblock %}
+        {% block contenido %}
+        {% endblock %}
+
+
+        {% include "estructura/footer.html"%}
+
+        
+    </body>
+</html>
