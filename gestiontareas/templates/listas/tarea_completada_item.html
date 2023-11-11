@@ -1,0 +1,10 @@
+<!-- tarea_completada_item.html -->
+<li>
+    <h3>{{ tarea.titulo }}</h3>
+    <p>Descripción: {{ tarea.descripcion }}</p>
+    <p>Prioridad: {{ tarea.prioridad }}</p>
+    <p>Fecha de Creación: {{ tarea.fecha_creacion|date:"F j, Y" }}</p>
+    <!--Formateo de fecha donde "F": El nombre completo del mes.
+"j": El día del mes sin ceros iniciales.
+"Y": El año con cuatro dígitos.-->
+</li>

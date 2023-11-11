@@ -6,7 +6,7 @@
         {% for tarea in tareas %}
             <li>
                 <h3>{{ tarea.titulo }}</h3>
-                <p>Descripción: {{ tarea.descripcion }}</p>
+                <p>Descripción: {{ tarea.descripcion|default:"Sin descripción" }}</p> <!--si por defecto no hay descripcion-->
                 <p>Prioridad: {{ tarea.prioridad }}</p>
                 <p>Fecha de Creación: {{ tarea.fecha_creacion }}</p>
             </li>

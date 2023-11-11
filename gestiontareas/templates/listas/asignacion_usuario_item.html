@@ -1,0 +1,8 @@
+<!-- asignacion_usuario_item.html 
+Guardamos el contenido de la lista -->
+<li>
+    <p>Usuario: {{ asignacion.usuario.nombre|capfirst }}</p> <!--Ponemos la primera letra en mayuscula-->
+    <p>Fecha de Asignación: {{ asignacion.fecha_asignacion|date:"F j, Y" }}</p> <!--formateo de fecha-->
+    <p>Observaciones: {{ asignacion.observaciones|cut:" " }}</p> <!--para eliminar espacios en blanco en las observaciones-->
+</li>
+

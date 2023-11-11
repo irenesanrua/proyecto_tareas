@@ -5,11 +5,9 @@
     <h2>Tareas filtradas por observaciones</h2>
     <ul>
         {% for asignacion in mostrar_asignaciones %}
-            <ul>
-                <li>Título de la Tarea: {{ asignacion.tarea.titulo }}</li>
-                <li>Fecha de Asignación: {{ asignacion.fecha_asignacion }}</li>
-                <li>Observaciones: {{ asignacion.observaciones }}</li>
-            </ul>
+            {% include "listas/asignacion_item.html" with asignacion=asignacion %}
+            {% empty %}
+            <li>No hay asignaciones para mostrar.</li>
         {% endfor %}
     </ul>
 {% endblock %}

@@ -5,9 +5,7 @@
     <h2>Lista etiquetas de todas las tareas</h2>
     <ul>
         {% for etiqueta in etiquetas %}
-            <li>
-                
-                <p>Etiqueta: {{ etiqueta.nombre }}</p>
-            </li>
+            {% include "listas/etiqueta_item.html" with etiqueta=etiqueta %}
         {% endfor %}
+    </ul>
 {% endblock %}

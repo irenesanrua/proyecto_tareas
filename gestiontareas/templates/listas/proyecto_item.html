@@ -1,0 +1,22 @@
+<!-- proyecto_item.html -->
+<div>
+    <h2>Nombre:</h2>
+    <p>{{ proyecto.nombre }}</p>
+    <h2>Descripcion: </h2>
+    <p>{{ proyecto.descripcion }}</p>
+    <h2>Fecha Inicio: </h2>
+    <p>Fecha Inicio: {{ proyecto.fecha_inicio|date:"F j, Y" }}</p> <!--Formateo de fecha-->
+    <h2>Fecha Fin: </h2>
+    <p>{{ proyecto.fecha_fin }}</p>
+    <h2>Autores: </h2>
+    <p>{{ proyecto.creador.nombre }}</p>
+    <h2>Usuarios: </h2>
+    <ul>
+        {% for usuario in proyecto.usuarios.all %}
+            <li>{{ usuario.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Tareas: </h2>
+    <p>{{ proyecto.tareas.titulo }}</p>
+    <h1>------------------------------------</h1>
+</div>

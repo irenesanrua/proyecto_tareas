@@ -1,11 +1,12 @@
-
+<!-- usuarios_no_asignados.html -->
 {% extends "principal.html" %}
 
 {% block contenido %}
-<h1>Usuarios No Asignados a Tareas</h1>
+    <h1>Usuarios No Asignados a Tareas</h1>
+    <p>Hay {{ usuarios_no_asignados|length }} usuarios no asignados en la lista.</p>
     <ul>
         {% for usuario in usuarios_no_asignados %}
-            <li>{{ usuario.nombre }}</li>
+            {% include "listas/usuario_no_asignado_item.html" with usuario=usuario %}
         {% endfor %}
     </ul>
 {% endblock %}

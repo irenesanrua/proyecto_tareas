@@ -1,0 +1,6 @@
+<!-- comentario_item.html -->
+<li>
+    <p>Contenido: {{ comentario.contenido|linebreaks }}</p> <!--filtro salto de linea-->
+    <p>Fecha del Comentario: {{ comentario.fecha_comentario|default:"Fecha no disponible"|date:"F j, Y H:i" }}</p> 
+    <!--por defecto si no hay datos, y luego formateo de fecha-->
+</li>

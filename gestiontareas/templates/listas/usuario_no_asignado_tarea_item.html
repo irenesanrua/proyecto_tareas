@@ -1,0 +1,8 @@
+<!-- usuario_no_asignado_tarea_item.html -->
+{% if usuario %}
+    <li>
+        <p>Usuario: {{ usuario.usuario }}</p>
+    </li>
+{% else %}
+    <li>No hay usuarios no asignados.</li>
+{% endif %}

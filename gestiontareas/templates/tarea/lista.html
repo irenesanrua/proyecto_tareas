@@ -1,3 +1,4 @@
+<!-- tareas_proyecto.html -->
 {% extends "principal.html" %}
 
 {% block contenido %}
@@ -5,14 +6,7 @@
     <h2>Lista de Tareas del Proyecto</h2>
     <ul>
         {% for tarea in tareasproyecto_mostrar %}
-            <li>
-                <h3>{{ tarea.titulo }}</h3>
-                <p>Descripción: {{ tarea.descripcion }}</p>
-                <p>Prioridad: {{ tarea.prioridad }}</p>
-                <p>Fecha de Creación: {{ tarea.fecha_creacion }}</p>
-            </li>
+            {% include "listas/tarea_proyecto_item.html" with tarea=tarea %}
         {% endfor %}
     </ul>
 {% endblock %}
-
-

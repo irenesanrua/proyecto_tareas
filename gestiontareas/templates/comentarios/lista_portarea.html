@@ -6,10 +6,9 @@
     <h2>Filtrados por Año y Palabra que Empiece con...</h2>
     <ul>
         {% for comentario in comentarios %}
-            <li>
-                <p>Contenido: {{ comentario.contenido }}</p>
-                <p>Fecha del Comentario: {{ comentario.fecha_comentario }}</p>
-            </li>
+            {% include "listas/comentario_item.html" with comentario=comentario %}
+            {%empty%}
+            "No existen resultados para esa búsqueda"
         {% endfor %}
     </ul>
 {% endblock %}

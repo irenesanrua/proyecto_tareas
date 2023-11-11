@@ -1,0 +1,12 @@
+<!-- tarea_proyecto_item.html -->
+<li>
+    <h3>{{ tarea.titulo|lower }}</h3> <!--dejar todo en minisculas-->
+    {% if tarea.descripcion %}
+        <p>Descripción: {{ tarea.descripcion|linebreaksbr }}</p> <!--Filtro para salto de linea-->
+    {% else %}
+        <p>No hay descripción disponible.</p>
+    {% endif %}
+    <p>Prioridad: {{ tarea.prioridad }}</p>
+    <p>Fecha de Creación: {{ tarea.fecha_creacion }}</p>
+</li>
+

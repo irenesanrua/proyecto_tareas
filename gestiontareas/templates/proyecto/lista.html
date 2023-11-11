@@ -1,30 +1,10 @@
+<!-- listado_proyectos.html -->
 {% extends "principal.html" %}
 
 {% block contenido %}
-  <h1>LISTADO DE PROYECTOS</h1>
-        <h1>------------------------------------</h1>
-        {% for proyecto in proyectos_mostrar%}
-        <div>
-            <h2>Nombre:</h2>
-            <p>{{proyecto.nombre}}</p>
-            <h2>Descripcion: </h2>
-            <p>{{proyecto.descripcion}}</p>
-            <h2>Fecha Inicio: </h2>
-            <p>{{proyecto.fecha_inicio}}</p>
-            <h2>Fecha Fin: </h2>
-            <p>{{proyecto.fecha_fin}}</p>
-            <h2>Autores: </h2>
-            <p>{{proyecto.creador.nombre}}</p>
-            <h2>Usuarios: </h2>
-            <ul>
-                {% for usuario in proyecto.usuarios.all%}
-                <li>{{usuario.nombre}}</li>
-                {%endfor%}
-            </ul>
-            <h2>Tareas: </h2>
-            <p>{{proyecto.tareas.titulo}}</p>
-          <h1>------------------------------------</h1> 
-        {% endfor%}
+    <h1>LISTADO DE PROYECTOS</h1>
+    <h1>------------------------------------</h1>
+    {% for proyecto in proyectos_mostrar %}
+        {% include "listas/proyecto_item.html" with proyecto=proyecto %}
+    {% endfor %}
 {% endblock %}
-
-      
